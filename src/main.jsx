@@ -9,12 +9,17 @@ import {
 } from "react-router-dom";
 import ListedBooksRoot from './Components/ListedBooksRoot.jsx';
 import PagesToReadRoot from './Components/PagesToReadRoot.jsx';
+import Home from './Components/Home.jsx';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
     children: [
+      {
+        path: '/',
+        element: <Home />
+      },
       {
         path: '/listed-books',
         element: <ListedBooksRoot />
