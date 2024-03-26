@@ -1,9 +1,12 @@
 import React from 'react';
 import StarIcon from '../assets/StarIcon.svg'
+import { useNavigate } from 'react-router-dom';
 
 const Book = ({ book }) => {
+    const navigate = useNavigate();
+
     return (
-        <div className="card  bg-base-100 shadow-xl">
+        <div className="card bg-base-100 shadow-xl cursor-pointer" onClick={()=>navigate(`/details/${book?.bookId}`)}>
             <figure className="px-10 pt-10">
                 <img src={book?.image} alt="Shoes" className="w-full h-64 rounded-xl" />
             </figure>
