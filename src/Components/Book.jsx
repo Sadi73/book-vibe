@@ -11,8 +11,8 @@ const Book = ({ book }) => {
                 <img src={book?.image} alt="Shoes" className="w-full h-64 rounded-xl" />
             </figure>
             <div className="card-body ">
-                <div className='flex'>
-                    {book.tags.map((tag, index) => <p key={index}>{tag}</p>)}
+                <div className='flex gap-3'>
+                    {book.tags.map((tag, index) => <p key={index} className='bg-[#23BE0A] bg-opacity-5 text-[#23BE0A] grow-0'>{tag}</p>)}
                 </div>
                 <h2 className="card-title">{book?.bookName}</h2>
                 <p>By: {book?.author}</p>

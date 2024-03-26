@@ -24,10 +24,10 @@ const Readbooks = ({ allBooks }) => {
                                 <p>Publisher: {readBook?.publisher}</p>
                                 <p>Page: {readBook?.totalPages}</p>
                             </div>
-                            <div className='flex'>
+                            <div className='flex items-center'>
                                 <p>Category: {readBook?.category}</p>
                                 <p>Rating: {readBook?.rating}</p>
-                                <Link to={`/details/${readBook?.bookId}`}>View Details</Link>
+                                <Link to={`/details/${readBook?.bookId}`}><button className='bg-[#23BE0A] text-white p-3'>View Details</button></Link>
                             </div>
                         </div>
                     </div>

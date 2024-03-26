@@ -15,15 +15,17 @@ const ListedBooksRoot = () => {
 
     return (
         <div>
-            <h1>Books</h1>
+            <h1 className='text-center'>Books</h1>
 
-            <details className="dropdown">
-                <summary className="m-1 btn">Sort By</summary>
-                <ul className="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52">
-                    <li><a>Item 1</a></li>
-                    <li><a>Item 2</a></li>
-                </ul>
-            </details>
+            <div className='flex justify-center'>
+                <details className="dropdown">
+                    <summary className="m-1 btn">Sort By</summary>
+                    <ul className="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52">
+                        <li><a>Item 1</a></li>
+                        <li><a>Item 2</a></li>
+                    </ul>
+                </details>
+            </div>
 
             <div className='flex gap-5 border-b-2'>
                 <button

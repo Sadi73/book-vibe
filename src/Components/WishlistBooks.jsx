@@ -23,10 +23,10 @@ const WishlistBooks = ({ allBooks }) => {
                                 <p>Publisher: {wishListBook?.publisher}</p>
                                 <p>Page: {wishListBook?.totalPages}</p>
                             </div>
-                            <div className='flex'>
+                            <div className='flex items-center'>
                                 <p>Category: {wishListBook?.category}</p>
                                 <p>Rating: {wishListBook?.rating}</p>
-                                <Link to={`/details/${wishListBook?.bookId}`}>View Details</Link>
+                                <Link to={`/details/${wishListBook?.bookId}`}><button className='bg-[#23BE0A] text-white p-3'>View Details</button></Link>
                             </div>
                         </div>
                     </div>
