@@ -1,0 +1,98 @@
+[
+    {
+        "bookId": 1,
+        "bookName": "1984",
+        "author": "George Orwell",
+        "image": "./images/1.jpg",
+        "review": "A dystopian masterpiece that explores themes of surveillance, propaganda, and the erosion of truth.",
+        "totalPages": 328,
+        "rating": 4.5,
+        "category": "Fiction",
+        "tags": [
+            "Dystopian",
+            "Political"
+        ],
+        "publisher": "Secker & Warburg",
+        "yearOfPublishing": 1949
+    },
+    {
+        "bookId": 2,
+        "bookName": "To Kill a Mockingbird",
+        "author": "Harper Lee",
+        "image": "./images/2.jpeg",
+        "review": "A poignant portrayal of racial injustice and moral growth in the American South.",
+        "totalPages": 281,
+        "rating": 4.8,
+        "category": "Fiction",
+        "tags": [
+            "Classic",
+            "Coming-of-age"
+        ],
+        "publisher": "J. B. Lippincott & Co.",
+        "yearOfPublishing": 1960
+    },
+    {
+        "bookId": 3,
+        "bookName": "The Great Gatsby",
+        "author": "F. Scott Fitzgerald",
+        "image": "./images/3.jpeg",
+        "review": "An exploration of the American Dream and its disillusionment, set in the Jazz Age.",
+        "totalPages": 218,
+        "rating": 4.6,
+        "category": "Fiction",
+        "tags": [
+            "Classic",
+            "Romance"
+        ],
+        "publisher": "Charles Scribner's Sons",
+        "yearOfPublishing": 1925
+    },
+    {
+        "bookId": 4,
+        "bookName": "Sapiens: A Brief History of Humankind",
+        "author": "Yuval Noah Harari",
+        "image": "./images/4.jpg",
+        "review": "An insightful journey through the history of Homo sapiens, exploring our cognitive revolution, agricultural revolution, and more.",
+        "totalPages": 443,
+        "rating": 4.7,
+        "category": "Non-fiction",
+        "tags": [
+            "History",
+            "Anthropology"
+        ],
+        "publisher": "Harper",
+        "yearOfPublishing": 2011
+    },
+    {
+        "bookId": 5,
+        "bookName": "The Catcher in the Rye",
+        "author": "J.D. Salinger",
+        "image": "./images/5.jpeg",
+        "review": "A coming-of-age novel that captures the disillusionment and rebelliousness of adolescence.",
+        "totalPages": 277,
+        "rating": 4.4,
+        "category": "Fiction",
+        "tags": [
+            "Classic",
+            "Coming-of-age"
+        ],
+        "publisher": "Little, Brown and Company",
+        "yearOfPublishing": 1951
+    },
+    {
+        "bookId": 6,
+        "bookName": "The Hitchhiker's Guide to the Galaxy",
+        "author": "Douglas Adams",
+        "image": "./images/6.jpg",
+        "review": "A comedic science fiction series that follows the misadventures of Arthur Dent and his interstellar travels.",
+        "totalPages": 193,
+        "rating": 4.3,
+        "category": "Fiction",
+        "tags": [
+            "Science Fiction",
+            "Humor"
+        ],
+        "publisher": "Pan Books",
+        "yearOfPublishing": 1979
+    }
+]
