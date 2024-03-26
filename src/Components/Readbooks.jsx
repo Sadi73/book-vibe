@@ -1,8 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const allReadBookIds = localStorage.getItem('read');
-
 const Readbooks = ({ allBooks }) => {
     const allReadBookIds = localStorage.getItem('read');
 
