@@ -22,7 +22,7 @@ const Details = () => {
             localStorage.setItem(key, JSON.stringify(data));
             toast(`Added book in ${key}!`)
         }
-        else{
+        else {
             toast("You have already added this book")
         }
     }
@@ -44,32 +44,32 @@ const Details = () => {
                 </div>
 
                 <div className='md:w-1/2'>
-                    <h1>{selectedBook?.bookName}</h1>
-                    <p>By: {selectedBook?.author}</p>
-                    <p className='border-t-2 border-b-2 py-3'>{selectedBook?.category}</p>
+                    <h1 className='text-5xl font-bold mb-3'>{selectedBook?.bookName}</h1>
+                    <p className='text-lg font-semibold mb-3'>By: {selectedBook?.author}</p>
+                    <p className='border-t-2 border-b-2 py-3 font-semibold'>{selectedBook?.category}</p>
 
-                    <p className='pt-3'> <span>Review:</span> {selectedBook?.review}</p>
+                    <p className='pt-3'> <span className='font-semibold'>Review:</span> {selectedBook?.review}</p>
                     <p className='border-b-2 pb-3 mt-3'>
-                        <span>Tag</span> {selectedBook?.tags?.map((tag, index) => <span key={index} className='bg-[#23BE0A] bg-opacity-5 text-[#23BE0A] mr-3 p-2'>{`#${tag}`}</span>)}
+                        <span className='font-semibold'>Tag</span> {selectedBook?.tags?.map((tag, index) => <span key={index} className='bg-[#23BE0A] bg-opacity-5 text-[#23BE0A] mr-3 p-2'>{`#${tag}`}</span>)}
                     </p>
 
                     <table>
                         <tbody>
                             <tr>
                                 <td>Number of Pages</td>
-                                <td>{selectedBook?.totalPages}</td>
+                                <td className='font-bold'>{selectedBook?.totalPages}</td>
                             </tr>
                             <tr>
                                 <td>Publisher</td>
-                                <td>{selectedBook?.publisher}</td>
+                                <td className='font-bold'>{selectedBook?.publisher}</td>
                             </tr>
                             <tr>
                                 <td>Year of Publishing</td>
-                                <td>{selectedBook?.yearOfPublishing}</td>
+                                <td className='font-bold'>{selectedBook?.yearOfPublishing}</td>
                             </tr>
                             <tr>
                                 <td>Rating</td>
-                                <td>{selectedBook?.rating}</td>
+                                <td className='font-bold'>{selectedBook?.rating}</td>
                             </tr>
                         </tbody>
                     </table>

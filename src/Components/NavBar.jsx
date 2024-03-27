@@ -25,8 +25,8 @@ const NavBar = () => {
                 </ul>
             </div>
             <div className="navbar-end gap-3">
-                <a className="btn">Sign In</a>
-                <a className="btn">Sign Up</a>
+                <a className="bg-[#23BE0A] text-white px-3 py-2 rounded-md cursor-pointer">Sign In</a>
+                <a className="bg-[#59C6D2] text-white px-3 py-2 rounded-md cursor-pointer">Sign Up</a>
             </div>
         </div>
     );
