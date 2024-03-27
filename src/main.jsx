@@ -12,6 +12,8 @@ import PagesToReadRoot from './Components/PagesToReadRoot.jsx';
 import Home from './Components/Home.jsx';
 import Details from './Components/Details.jsx';
 import ErrorPage from './Components/ErrorPage.jsx';
+import UpcomingBooks from './Components/UpcomingBooks.jsx';
+import Contact from './Components/Contact.jsx';
 
 const router = createBrowserRouter([
   {
@@ -34,6 +36,14 @@ const router = createBrowserRouter([
       {
         path: '/details/:id',
         element: <Details />
+      },
+      {
+        path: '/upcoming-books',
+        element: <UpcomingBooks />
+      },
+      {
+        path: '/contact',
+        element: <Contact />
       },
     ]
   },

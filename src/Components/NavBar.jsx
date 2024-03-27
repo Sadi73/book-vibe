@@ -13,6 +13,8 @@ const NavBar = () => {
                         <li><NavLink to='/'>Home</NavLink></li>
                         <li><NavLink to='/listed-books'>Listed Books</NavLink></li>
                         <li><NavLink to='/pages-to-read'>Pages to Read</NavLink></li>
+                        <li><NavLink to='/upcoming-books'>Upcoming Books</NavLink></li>
+                        <li><NavLink to='/contact'>Contact Us</NavLink></li>
                     </ul>
                 </div>
                 <Link to='/' className="btn btn-ghost text-xl">Book Vibe</Link>
@@ -22,6 +24,8 @@ const NavBar = () => {
                     <li><NavLink to='/'>Home</NavLink></li>
                     <li><NavLink to='/listed-books'>Listed Books</NavLink></li>
                     <li><NavLink to='/pages-to-read'>Pages to Read</NavLink></li>
+                    <li><NavLink to='/upcoming-books'>Upcoming Books</NavLink></li>
+                    <li><NavLink to='/contact'>Contact Us</NavLink></li>
                 </ul>
             </div>
             <div className="navbar-end gap-3">
