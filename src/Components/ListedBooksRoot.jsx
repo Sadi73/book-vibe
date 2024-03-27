@@ -38,7 +38,7 @@ const ListedBooksRoot = () => {
                     className={`${selectedView === 'wishlistBooks' && 'border-t-2 border-l-2 border-r-2 '} p-2`}>Wishlist Books</button>
             </div>
 
-            {selectedView === 'readBooks' ? <Readbooks allBooks={allBooks} /> : <WishlistBooks allBooks={allBooks} />}
+            {selectedView === 'readBooks' ? <Readbooks allBooks={allBooks} sortType={sortType}/> : <WishlistBooks allBooks={allBooks} sortType={sortType}/>}
 
         </div>
     );

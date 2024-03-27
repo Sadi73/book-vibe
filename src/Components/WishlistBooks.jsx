@@ -1,19 +1,42 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import pageIcon from '../assets/pageIcon.svg';
 import publisherIcon from '../assets/publisherIcon.svg';
 import yearIcon from '../assets/yearIcon.svg';
 
 
-const WishlistBooks = ({ allBooks }) => {
-    const navigate = useNavigate();
+const WishlistBooks = ({ allBooks, sortType }) => {
+    // const navigate = useNavigate();
     const allWishListBookIds = localStorage.getItem('wishlist');
     const wishListbookdetails = allBooks.filter(book => allWishListBookIds?.includes(book.bookId));
 
+    const [sortedBooks, setSortedBooks] = useState([]);
+
+    useEffect(() => {
+        if (wishListbookdetails?.length > 0) {
+            if (sortType === null) {
+                setSortedBooks([...wishListbookdetails])
+            }
+            else if (sortType === 'rating') {
+                wishListbookdetails.sort((a, b) => b.rating - a.rating);
+                setSortedBooks([...wishListbookdetails])
+            }
+            else if (sortType === 'page') {
+                wishListbookdetails.sort((a, b) => b.totalPages - a.totalPages);
+                setSortedBooks([...wishListbookdetails])
+            }
+            else if (sortType === 'year') {
+                wishListbookdetails.sort((a, b) => a.yearOfPublishing - b.yearOfPublishing);
+                setSortedBooks([...wishListbookdetails])
+            }
+        }
+    }, [allBooks, sortType]);
+
+
     return (
         <div>
-            {wishListbookdetails?.length > 0 &&
-                wishListbookdetails.map(wishListBook =>
+            {sortedBooks?.length > 0 &&
+                sortedBooks.map(wishListBook =>
                     <div key={wishListBook?.bookId} className="card card-side bg-base-100 shadow-xl p-10 mb-5 gap-10 items-center">
                         <figure><img src={wishListBook?.image} className='w-64 h-72' alt="Movie" /></figure>
                         <div className="w-[60%] space-y-3">
