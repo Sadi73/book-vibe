@@ -16,14 +16,31 @@ const Details = () => {
     }
 
     const handleLocalStorage = (key, bookId) => {
-        const data = getStoredDataFromLocalStorage(key);
-        if (!data?.includes(bookId)) {
-            data.push(bookId);
-            localStorage.setItem(key, JSON.stringify(data));
-            toast(`Added book in ${key}!`)
+        const readList = getStoredDataFromLocalStorage('read');
+        const wishList = getStoredDataFromLocalStorage('wishlist');
+
+        if (readList?.includes(bookId)) {
+            toast.warn("You have already read this book");
         }
-        else {
-            toast("You have already added this book")
+        else if (key === 'wishlist') {
+            if (wishList?.includes(bookId)) {
+                toast.warn("You have already added this book");
+            }
+            else {
+                wishList.push(bookId);
+                localStorage.setItem(key, JSON.stringify(wishList));
+                toast.success(`Added book in ${key}!`)
+            }
+        } else {
+            readList.push(bookId);
+            localStorage.setItem(key, JSON.stringify(readList));
+            toast.success(`Added book in ${key}!`);
+
+            if (wishList?.includes(bookId)) {
+                const indexToRemove = wishList.indexOf(bookId);
+                wishList.splice(indexToRemove, 1);
+                localStorage.setItem('wishlist', JSON.stringify(wishList));
+            }
         }
     }
 
@@ -38,7 +55,7 @@ const Details = () => {
     return (
         <>
             <ToastContainer />
-            <div className='flex flex-col md:flex-row gap-10'>
+            <div className='flex flex-col md:flex-row gap-10 my-10'>
                 <div className='md:w-1/2 '>
                     <img src={`${selectedBook?.image}`} className='w-full max-h-[600px]' alt="not found" />
                 </div>

@@ -5,6 +5,7 @@ import WishlistBooks from './WishlistBooks';
 const ListedBooksRoot = () => {
 
     const [selectedView, setSelectedView] = useState('readBooks');
+    const [sortType, setSortType] = useState(null);
     const [allBooks, setAllBooks] = useState([]);
 
     useEffect(() => {
@@ -19,10 +20,11 @@ const ListedBooksRoot = () => {
 
             <div className='flex justify-center'>
                 <details className="dropdown">
-                    <summary className="m-1 bg-[#23BE0A] text-white py-3 px-5 rounded-lg">Sort By</summary>
+                    <summary className="m-1 bg-[#23BE0A] text-white py-3 px-5 rounded-lg cursor-pointer">Sort By</summary>
                     <ul className="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52">
-                        <li><a>Item 1</a></li>
-                        <li><a>Item 2</a></li>
+                        <li onClick={() => setSortType('rating')}><a>Rating</a></li>
+                        <li onClick={() => setSortType('page')}><a>Number of Pages</a></li>
+                        <li onClick={() => setSortType('year')}><a>Publish Year</a></li>
                     </ul>
                 </details>
             </div>
