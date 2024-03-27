@@ -43,14 +43,14 @@ const Details = () => {
                     <img src={`${selectedBook?.image}`} className='w-full max-h-[600px]' alt="not found" />
                 </div>
 
-                <div className='md:w-1/2'>
+                <div className='md:w-1/2 space-y-3'>
                     <h1 className='text-5xl font-bold mb-3'>{selectedBook?.bookName}</h1>
                     <p className='text-lg font-semibold mb-3'>By: {selectedBook?.author}</p>
                     <p className='border-t-2 border-b-2 py-3 font-semibold'>{selectedBook?.category}</p>
 
-                    <p className='pt-3'> <span className='font-semibold'>Review:</span> {selectedBook?.review}</p>
+                    <p className='pt-3'> <span className='font-bold'>Review:</span> {selectedBook?.review}</p>
                     <p className='border-b-2 pb-3 mt-3'>
-                        <span className='font-semibold'>Tag</span> {selectedBook?.tags?.map((tag, index) => <span key={index} className='bg-[#23BE0A] bg-opacity-5 text-[#23BE0A] mr-3 p-2'>{`#${tag}`}</span>)}
+                        <span className='font-bold'>Tag</span> {selectedBook?.tags?.map((tag, index) => <span key={index} className='bg-[#23BE0A] bg-opacity-5 text-[#23BE0A] mr-3 p-2'>{`#${tag}`}</span>)}
                     </p>
 
                     <table>
@@ -76,10 +76,10 @@ const Details = () => {
 
                     <div>
                         <button
-                            className='border-2 py-3 px-5 mr-3'
+                            className='border-2 py-3 px-5 mr-3 rounded-lg'
                             onClick={() => handleLocalStorage('read', selectedBook?.bookId)}>Read</button>
                         <button
-                            className='bg-[#50B1C9] text-white py-3 px-5'
+                            className='bg-[#50B1C9] text-white py-3 px-5 rounded-lg'
                             onClick={() => handleLocalStorage('wishlist', selectedBook?.bookId)}>Wishlist</button>
                     </div>
 

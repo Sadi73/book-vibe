@@ -15,7 +15,7 @@ const ListedBooksRoot = () => {
 
     return (
         <div>
-            <h1 className='text-center bg-[#131313] bg-opacity-5 p-5 text-3xl font-bold'>Books</h1>
+            <h1 className='text-center bg-[#131313] bg-opacity-5 p-5 text-3xl font-bold my-5'>Books</h1>
 
             <div className='flex justify-center'>
                 <details className="dropdown">
