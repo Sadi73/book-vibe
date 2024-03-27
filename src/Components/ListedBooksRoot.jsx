@@ -15,11 +15,11 @@ const ListedBooksRoot = () => {
 
     return (
         <div>
-            <h1 className='text-center'>Books</h1>
+            <h1 className='text-center bg-[#131313] bg-opacity-5 p-5 text-3xl font-bold'>Books</h1>
 
             <div className='flex justify-center'>
                 <details className="dropdown">
-                    <summary className="m-1 btn">Sort By</summary>
+                    <summary className="m-1 bg-[#23BE0A] text-white py-3 px-5 rounded-lg">Sort By</summary>
                     <ul className="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52">
                         <li><a>Item 1</a></li>
                         <li><a>Item 2</a></li>
