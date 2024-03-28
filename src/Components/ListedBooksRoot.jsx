@@ -22,9 +22,9 @@ const ListedBooksRoot = () => {
                 <details className="dropdown">
                     <summary className="m-1 bg-[#23BE0A] text-white py-3 px-5 rounded-lg cursor-pointer">Sort By</summary>
                     <ul className="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52">
-                        <li onClick={() => setSortType('rating')}><a>Rating</a></li>
-                        <li onClick={() => setSortType('page')}><a>Number of Pages</a></li>
-                        <li onClick={() => setSortType('year')}><a>Publish Year</a></li>
+                        <li onClick={() => setSortType('rating')}>Rating</li>
+                        <li onClick={() => setSortType('page')}>Number of Pages</li>
+                        <li onClick={() => setSortType('year')}>Publish Year</li>
                     </ul>
                 </details>
             </div>
